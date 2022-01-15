@@ -32,6 +32,8 @@ export const loader: LoaderFunction = async () => {
 }
 
 export default function JokesRoute() {
+  // Passing the type of LoaderData to useLoaderData and doing auto-complete, but
+  // not sure if the type is actually the same as the returned data, so use zod to assert it.
   const data = useLoaderData<LoaderData>()
   return (
     <div className="jokes-layout">
